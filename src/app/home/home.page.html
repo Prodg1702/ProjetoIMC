@@ -1,24 +1,26 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
+  <ion-toolbar translucent>
+    <ion-title id="titulo">
       IMC
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="fundo">
+
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">IMC</ion-title>
+    <ion-toolbar >
+      <ion-title size="large">IMC <ion-icon name="stats-chart-outline"></ion-icon></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <ion-item>
+    <ion-item color="purple">
       <ion-label position="floating">Altura:</ion-label>
       <ion-input [(ngModel)]="altura" ></ion-input>
     </ion-item>
-    <ion-item>
+
+    <ion-item color="purple">
       <ion-label position="floating">Peso:</ion-label>
       <ion-input [(ngModel)]="peso"></ion-input>
     </ion-item>
@@ -26,10 +28,12 @@
       <ion-select-option value="fem">Feminino</ion-select-option>
       <ion-select-option value="masc">Masculino</ion-select-option>
     </ion-select>
-    <ion-button color="danger" shape="round" (click)="imc()">IMC</ion-button>
+    <ion-button color="purple" shape="round" (click)="imc()">IMC</ion-button>
+    <ion-button color="purple" shape="round" (click)="enviar()">Salvar</ion-button>
 
 
     <p>{{saida}}</p>
     <h2>{{ shape }}</h2>
+    <ion-img src="../../assets/icon/ginasio.png"></ion-img>
   </div>
 </ion-content>

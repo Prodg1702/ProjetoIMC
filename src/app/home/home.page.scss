@@ -1,3 +1,8 @@
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}
+
 #container {
   text-align: center;
 
@@ -26,8 +31,16 @@
   text-decoration: none;
 }
 
-h2{
- border: 1px solid red;
- position: relative;
- top: 50px;
+#container ion-img {
+  height: 80px;
+
+}
+
+#div img {
+  width: 40px;
+  height: 40px;
+}
+
+.fundo {
+  --background: URL("../../assets/icon/fundoIMC.jpg");
 }
